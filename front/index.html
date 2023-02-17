@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIMILAR PHRASES</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="{{url_for('static', path='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', path='style.css')}}">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                 <h2>STATS</h2>
                 <ul>
                     <li>
-                        1
+                        {{test}}
                     </li>
                     <li>2
                     </li>
@@ -113,5 +113,5 @@
 
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static', path='/js/bootstrap.bundle.min.js')}}"></script>
 </body></html>
