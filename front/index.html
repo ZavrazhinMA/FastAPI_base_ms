@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMILAR PHRASES</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="block_1">
+            <div class="col-5" id="first_block">
+                <form>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Выберите файл истории</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <label for="select_wv" class="form-label">Выберите языковую модель</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="select_wv">
+
+                        <option value="fasttext" selected="True">fasttext</option>
+                        <option value="word2vec">word2vec</option>
+                    </select>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button" id="update">ОБНОВИТЬ МОДЕЛИ</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Выберите файл для поиска</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button" id="find">ПОЛУЧИТЬ ФАЙЛ</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col" id="stats">
+                <h2>STATS</h2>
+                <ul>
+                    <li>
+                        1
+                    </li>
+                    <li>2
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="block_2">
+            <div class="col-12">
+                <form>
+                    <div class="mb-3">
+                        <label for="text_to_find" class="form-label">Введите текст для поиска</label>
+                        <input class="form-control" type="text" placeholder="Хочу оформить кредит" aria-label="default input example" id="text_to_find">
+                        <div class="form-check">
+                            <div>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Выводить дистанцию
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="True" id="flexCheckChecked" checked>
+                                <button class="btn btn-primary" type="button" id="find_2">ПОИСК ПОХОЖИХ</button>
+                                <form action="">
+                                    <input style="margin-left: 50px;" type="number" id="num_find" name="num_find" min="1" max="30" value="20">
+                                    <label class="for-num-label" for="num_find">
+                                        Количество похожих фраз
+                                    </label>
+                                </form>
+                            </div>
+
+
+
+                            <div class="output">
+                                <label for="exampleFormControlTextarea1" class="form-label">RESULTS</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="process">
+            ntycn
+        </div>
+        <div class="logs">
+            <form action="">
+                <input type="submit" name="logs" id="logs" value=" LOGS ">
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body></html>

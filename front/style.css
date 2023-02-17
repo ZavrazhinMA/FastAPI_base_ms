@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#block_1 {
+    height: 300px;
+}
+
+/*
+#stats {
+    border-style: solid;
+    border-color: darkblue;
+*/
+/*    background-image: url(img/add.png);    */
+/*    background-position: center 5%*/
+/*
+    border-radius: 30px;
+}
+*/
+
+#block_2 {
+    margin-top: 30px;
+    border-top: solid darkblue;
+    height: 600px;
+    position: relative;
+}
+
+.col h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#stats {
+    padding-left: 20px;
+}
+
+#exampleFormControlTextarea1 {
+    width: 60%;
+    line-height: 10;
+    border: solid darkblue;
+    border-radius: 30px;
+}
+
+.form-label {
+    font-size: 25px;
+}
+
+#first_block {
+    border-right: solid darkblue
+}
+
+.form-control {
+
+    border: solid darkblue;
+    border-radius: 30px;
+    background-image: url("img/cat.gif");
+    background-repeat: no-repeat;
+    background-position: -20px 190px;
+    opacity: 0.6;
+}
+
+.form-select {
+    border: solid darkblue;
+    border-radius: 30px;
+}
+
+#num_find {
+    border: solid darkblue;
+    border-radius: 3px;
+    width: auto;
+
+    
+}
+
+#update {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 40px;
+    height: 50px;
+    border: solid darkblue;
+    border-radius: 30px;
+    background-color: darkgreen;
+}
+
+#find {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 45px;
+    height: 50px;
+    border: solid darkblue;
+    background-color: darkblue;
+    border-radius: 30px;
+}
+
+#find_2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 100px;
+    height: 100px;
+    width: 300px;
+
+    border: solid darkblue;
+    background-color: darkblue;
+    border-radius: 30px;
+    margin-left: 500px;
+    position: absolute;
+}
+
+body {
+    background-image: url("img/bcrnd.jpg");
+}
+
+
+
+.output {
+    float: left;
+    width: 1000px;
+    margin-top: 20px
+}
+
+.form-check {
+    margin-top: 10px
+}
+
+
+.footer {
+    height: 30px;
+    margin: 100px 0px 0px 0px;
+    background: white;
+
+}
+ 
+.process {
+    height: 30px;
+    width: 1200px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    float: left;
+}
+
+.logs {
+    height: 30px;
+    margin: auto;
+    display: inline-block;
+    float: right;
+}
+
+#logs {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    height: 30px;
+    border: solid darkgray;
+    background-color: lightgray;
+    border-radius: 3px;
+    float: right;
+}
