@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.conteiner {
+.container {
     width: 1200px;
     margin: 0 auto;
 }
@@ -12,17 +12,19 @@
     height: 300px;
 }
 
-/*
-#stats {
-    border-style: solid;
-    border-color: darkblue;
-*/
-/*    background-image: url(img/add.png);    */
-/*    background-position: center 5%*/
-/*
+
+#find_2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 50px;
+    height: 95px;
+    border: solid #007d8b;
+    background-color: midnightblue;
     border-radius: 30px;
+    width: 300px;
+    margin-left: 650px;
+    position: absolute;
 }
-*/
 
 #block_2 {
     margin-top: 30px;
@@ -42,11 +44,6 @@
     padding-left: 20px;
 }
 
-#exampleFormControlTextarea1 {
-    width: 60%;
-    line-height: 10;
-    border: solid darkblue;
-    border-radius: 30px;
 }
 
 .form-label {
@@ -58,67 +55,64 @@
 }
 
 .form-control {
-
     border: solid darkblue;
     border-radius: 30px;
-    background-image: url("img/cat.gif");
-    background-repeat: no-repeat;
-    background-position: -20px 190px;
-    opacity: 0.6;
+    width: 400px;
 }
 
 .form-select {
     border: solid darkblue;
+    height: 45px;
     border-radius: 30px;
+    padding-top: 0;
+    width: 400px
 }
 
 #num_find {
     border: solid darkblue;
     border-radius: 3px;
     width: auto;
-
-    
 }
 
 #update {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 40px;
-    height: 50px;
-    border: solid darkblue;
+    margin-top: 45px;
+    height: 45px;
+    border: solid #007d8b;
+    background-color: midnightblue;
     border-radius: 30px;
-    background-color: darkgreen;
+    width: 400px
 }
 
 #find {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 45px;
-    height: 50px;
-    border: solid darkblue;
-    background-color: darkblue;
+    height: 45px;
+    border: solid #0093ff;
+    background-color: midnightblue;
     border-radius: 30px;
+    width: 400px
 }
 
-#find_2 {
-    font-size: 22px;
+#find_download {
+    font-size: 16px;
     font-weight: bold;
-    margin-top: 100px;
-    height: 100px;
-    width: 300px;
-
-    border: solid darkblue;
-    background-color: darkblue;
+    margin-top: 95px;
+    height: 45px;
+    border: solid #007d8b;
+    background-color: midnightblue;
     border-radius: 30px;
-    margin-left: 500px;
-    position: absolute;
+    width: 400px
+}
+
+#text_to_find {
+width: 900px;
 }
 
 body {
     background-image: url("img/bcrnd.jpg");
 }
-
-
 
 .output {
     float: left;
@@ -130,14 +124,13 @@ body {
     margin-top: 10px
 }
 
-
 .footer {
     height: 30px;
     margin: 100px 0px 0px 0px;
     background: white;
 
 }
- 
+
 .process {
     height: 30px;
     width: 1200px;
@@ -163,4 +156,25 @@ body {
     background-color: lightgray;
     border-radius: 3px;
     float: right;
+}
+
+.form-control-textarea {
+    border: solid darkblue;
+    border-radius: 30px;
+    background-image: url(img/cat.gif);
+    background-repeat: no-repeat;
+    background-position: -20px 240px;
+    opacity: 0.8;
+    font-size: 10px;
+    width: 800px;
+    height: 550px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+#text_to_find {
+    border: solid darkblue;
+    border-radius: 30px;
+    width: 900px;
 }
