@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#block_1 {
+    height: 300px;
+}
+
+
+#find_2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 50px;
+    height: 95px;
+    border: solid #007d8b;
+    background-color: midnightblue;
+    border-radius: 30px;
+    width: 300px;
+    margin-left: 650px;
+    position: absolute;
+}
+
+#block_2 {
+    margin-top: 30px;
+    border-top: solid darkblue;
+    height: 600px;
+    position: relative;
+}
+
+.col h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#stats {
+    padding-left: 20px;
+}
+
+}
+
+.form-label {
+    font-size: 25px;
+}
+
+#first_block {
+    border-right: solid darkblue
+}
+
+.form-control {
+    border: solid darkblue;
+    border-radius: 30px;
+    width: 400px;
+}
+
+.form-select {
+    border: solid darkblue;
+    height: 45px;
+    border-radius: 30px;
+    padding-top: 0;
+    width: 400px
+}
+
+#num_find {
+    border: solid darkblue;
+    border-radius: 3px;
+    width: auto;
+}
+
+#update {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 45px;
+    height: 45px;
+    border: solid #007d8b;
+    background-color: midnightblue;
+    border-radius: 30px;
+    width: 400px
+}
+
+#find {
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+    border: solid #0093ff;
+    background-color: midnightblue;
+    border-radius: 30px;
+    width: 400px
+}
+
+#find_download {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 95px;
+    height: 45px;
+    border: solid #007d8b;
+    background-color: midnightblue;
+    border-radius: 30px;
+    width: 400px
+}
+
+#text_to_find {
+width: 900px;
+}
+
+body {
+    background-image: url("img/bcrnd.jpg");
+}
+
+.output {
+    float: left;
+    width: 1000px;
+    margin-top: 20px
+}
+
+.form-check {
+    margin-top: 10px
+}
+
+.footer {
+    height: 30px;
+    margin: 100px 0px 0px 0px;
+    background: white;
+
+}
+
+.process {
+    height: 30px;
+    width: 1200px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    float: left;
+}
+
+.logs {
+    height: 30px;
+    margin: auto;
+    display: inline-block;
+    float: right;
+}
+
+#logs {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    height: 30px;
+    border: solid darkgray;
+    background-color: lightgray;
+    border-radius: 3px;
+    float: right;
+}
+
+.form-control-textarea {
+    border: solid darkblue;
+    border-radius: 30px;
+    background-image: url(img/cat.gif);
+    background-repeat: no-repeat;
+    background-position: -20px 240px;
+    opacity: 0.8;
+    font-size: 10px;
+    width: 800px;
+    height: 550px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+#text_to_find {
+    border: solid darkblue;
+    border-radius: 30px;
+    width: 900px;
+}
