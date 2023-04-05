@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMILAR PHRASES</title>
+    <link href="{{ url_for('static', path='/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="block_1">
+            <div class="col-5" id="first_block">
+                <form method="POST" action="/history_files" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="form-file" class="form-label">Выберите файл истории</label>
+                        <input class="form-control" type="file" name="h_file" id="form-file">
+                    </div>
+                    <label for="select_wv" class="form-label">Выберите языковую модель</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="model_type" id="select_wv">
+
+                        <option value="fasttext">fasttext</option>
+                        <option value="word2vec">word2vec</option>
+                    </select>
+                    <div class="d-grid gap-2">
+                        <input class="btn btn-primary" onclick="confirm('Обновление файла истории и моделей может занять несколько минут')" type="submit" id="update" value="&#128257; ОБНОВИТЬ МОДЕЛИ &#128257;">
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <form method="POST" action="/excel_predict" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="form-file2" class="form-label">Выберите файл для поиска</label>
+                        <input class="form-control" type="file" name="target_file" id="form-file2">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit" id="find"> ОТПРАВИТЬ ФАЙЛ НА ОБРАБОТКУ </button>
+                    </div>
+                </form>
+                <form method="GET" action="/excel_file" enctype="multipart/form-data">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit" id="find_download"> ПОЛУЧИТЬ ФАЙЛ С РЕЗУЛЬТАТАМИ </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col" id="stats">
+                <h2>STATS</h2>
+                <ul>
+                    <li>
+                        Base size: {{params.base_size}}
+                    </li>
+                    <li style="font-size: 12px; font-weight: bold;">
+                        MONTHS:<br>{{params.history_months|safe}}
+                    </li>
+                    <li>
+                        Last date: {{params.last_date}}
+                    </li>
+                    <li>
+                        Model: {{params.model_class}}
+                    </li>
+                    <li>
+                        final file: {{params.result_filename}}
+                    </li>
+
+                    <li>
+                        {% if params.status=="OK": %}
+                        <p style="color: darkgreen; font-weight: bold;">STATUS: {{params.status}}</p>
+                        {%  elif params.status=="FAIL" %}
+                        <p style="color: darkred; font-weight: bold;">STATUS: {{params.status}}</p>
+                        {%  else %}
+                        <p style="color: yellow; font-weight: bold;">STATUS: {{params.status}}</p>
+                        {%  endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" id="block_2">
+            <div class="col-12">
+                <form method="POST" action="/sim_phrases" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="text_to_find" class="form-label">Введите текст для поиска</label>
+                        <input class="form-control" type="text" name="phrase" value="{{params.current_phrase}}" aria-label="default input example" id="text_to_find" style="width: 1130px;">
+                        <div class="form-check">
+                            <div>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Выводить дистанцию
+                                </label>
+                                <input class="form-check-input" type="checkbox" name="return_dist" value="True" id="flexCheckChecked" checked>
+                                <button class="btn btn-primary" type="submit" id="find_2"> ПОИСК ПОХОЖИХ </button>
+                                <input style="margin-left: 50px; padding-left: 10px;" type="number" id="num_find" name="num_phrases" min="1" max="30" value="20">
+                                <label class="for-num-label" for="num_find">
+                                    Количество похожих фраз
+                                </label>
+                                <div class="output">
+                                    <textarea class="form-control-textarea" id="exampleFormControlTextarea1" name="result" rows=30 readonly> {{params.current_answer}}</textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="process">
+            {{params.current_process}}
+        </div>
+        <div class="logs">
+            <form method="GET" action="/logs">
+                <input type="submit" name="logs" id="logs" value=" LOGS ">
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="{{url_for('static', path='/js/bootstrap.bundle.min.js')}}"></script>
+
+</body></html>
+
