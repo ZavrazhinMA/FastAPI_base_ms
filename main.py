@@ -11,7 +11,7 @@ from pydantic import BaseModel
 from model import FakeNLPModel
 import os
 
-handler = RotatingFileHandler(filename='app.log', maxBytes=10000, backupCount=0)
+handler = RotatingFileHandler(filename='app.log', maxBytes=10000, backupCount=0, encoding="UTF-8")
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 logger.addHandler(handler)
